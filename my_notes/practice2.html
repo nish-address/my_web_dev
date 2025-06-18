@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+  <title>
+    DOM PRACTICE
+  </title>
+  <style>
+    .title {
+      font-size: 20px;
+      font-weight:bold;
+    }
+    
+    .subscribe-button {
+      background-color: black;
+      color: white;
+      border-radius: 60px;
+      padding: 8px 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .is-subscribed {
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+
+  </style>
+</head>
+<body>
+<p class="title">Youtube Subscribe Button</p>
+
+<button class="js-subscribe-button subscribe-button"
+onclick="
+
+Subscribe();
+">Subscribe</button>
+
+<p>Amazon Shipping Calculator</p>
+<input placeholder="Cost of Order" class="js-cost-input">
+<button class="js-calculate-button"
+onclick="
+const inputElement = document.querySelector('.js-cost-input');
+let cost = Number(inputElement.value);
+if (cost < 40) {
+  cost = cost + 10;
+}
+document.querySelector('.js-result')
+.innerHTML = `$${cost}`;
+
+
+
+">Calculate</button>
+<p class="js-result"></p>
+<script>
+  function Subscribe() {
+      const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if (buttonElement.innerHTML === 'Subscribe') {
+      buttonElement.innerHTML = 'Subscribed';
+      buttonElement.classList.add('is-subscribed')
+    } else {
+      buttonElement.innerHTML = 'Subscribe';
+      buttonElement.classList.remove('is-subscribed')
+    }
+  }
+</script>  
+</body>

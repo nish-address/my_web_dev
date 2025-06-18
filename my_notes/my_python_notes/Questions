@@ -1,0 +1,10 @@
+#How to create a list?
+#How to print the first and last elements?
+#How to get alphabetically sorted list?
+#How to add more items in the list?
+#How to check for particular item in a list?
+#How to slice a list?
+#create a list of numbers less than 5 using list comprehension(i for i)
+
+print(sorted((my_list))
+
